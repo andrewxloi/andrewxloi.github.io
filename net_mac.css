@@ -1,0 +1,25 @@
+body,td				{font-family: Verdana; color: #09358D; font-size: 11px;}
+a					{font-family: Verdana; color: #ffffff; font-size: 11px;}
+a.mail				{color: #4b6db1; text-decoration: underline;}
+a.red				{color: #09358D; text-decoration: underline;font-size: 11px;}
+a.red:hover			{color: #9c3100; text-decoration: underline;font-size: 11px;}
+a.redDue				{color: #9c3100; text-decoration: underline;font-size: 11px;}
+a.redDue:hover		{color: #9c3100; text-decoration: underline;font-size: 11px;}
+.red				{color: #9c3100; font-size: 11px;}
+
+.logo				{font-family: Arial; color: #4b6db1; font-size: 36px;}
+.point14			{font-family: Verdana; color: #4b6db1; font-size: 14px;}
+.point12			{font-family: Verdana; color: #4b6db1; font-size: 12px;}
+.keyline			{background-color: #4b6db1;}
+.navOff				{font-family: Verdana; color: #ffffff; font-size: 11px; background-color: #4b6db1; font-weight: bold;}
+a.navOff			{font-weight: bold;}
+.navStay			{font-family: Verdana; color: #ffffff; font-size: 11px; background-color: #9AE228; font-weight: bold;}
+.backgdSubNavOff	{font-family: Verdana; color: #993366; font-size: 11px;}
+a.subNavOff			{font-family: Verdana; color: #83C31D;  text-decoration: underline; font-size: 11px; font-weight: bold;}
+a.subNavOff:hover	{color: #9c3100; text-decoration: underline; font-weight: bold;}
+.subNavStay			{font-family: Verdana; color: #9c3100; font-size: 11px; font-weight: bold;}
+
+.just				{text-align: justify; color: #09358D;}
+a.just				{color: #09358D; text-decoration: underline;}
+a.just:hover		{color: #9c3100; text-decoration: underline;}
+	
