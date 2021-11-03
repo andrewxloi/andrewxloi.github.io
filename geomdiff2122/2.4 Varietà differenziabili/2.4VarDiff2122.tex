@@ -1,0 +1,171 @@
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[80pt,defrtgr]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fullpage}
+\usepackage{color}
+
+
+\def\Der{\mathop{\hbox{Der}}}
+
+\def\u{\mathop{\hbox{vol}}}
+\def\v{\mathop{\hbox{vol}}}
+\def\w{\mathop{\hbox{vol}}}
+\def\0{\mathop{\hbox{0}}}
+\def\normalshape{\rm}
+
+\def\sin{\mathop{\hbox{sin}}}
+\def\cos{\mathop{\hbox{cos}}}
+\def\tg{\mathop{\hbox{tg}}}
+\def\vol{\mathop{\hbox{vol}}}
+\def\det{\mathop{\hbox{det}}}
+\def\tr{\mathop{\hbox{tr}}}
+\def\curv{\mathop{\hbox{curv}}}
+\def\hol{\mathop{\hbox{hol}}}
+\def\Aut{\mathop{\hb|x{Aut}}}
+\def\Isom{\mathop{\hbox{Isom}}}
+\def\Hom{\mathop{\hbox{Hom}}}
+\def\dim{\mathop{\hbox{dim}}}
+\def\GL{\mathop{\hbox{GL}}}
+\def\PGL{\mathop{\hbox{PGL}}}
+\def\PU{\mathop{\hbox{PU}}}
+\def\Pic {\mathop{\hbox{Pic}}}
+\def\O {\mathop{\hbox{O}}}
+\def\SO {\mathop{\hbox{SO}}}
+\def\SL {\mathop{\hbox{SL}}}
+\def\U {\mathop{\hbox{U}}}
+\def\u {\mathop{\hbox{u}}}
+\def\H {\mathop{\hbox{H}}}
+\def\S {\mathop{\hbox{S}}}
+\def\M {\mathop{\hbox{M}}}
+\def\tr {\mathop{\hbox{tr}}}
+\def\Symp {\mathop{\hbox{Symp}}}
+\def\dimn {\mathop{\hbox{dim}}}
+\def\volm {\mathop{\hbox{vol}}}
+\def\span {\mathop{\hbox{Span}}}
+\def\End {\mathop{\hbox{End}}}
+%\def\R {\mathop{\hbox{Re}}}
+\def\I {\mathop{\hbox{Im}}}
+\def\Arg {\mathop{\hbox{Arg}}}
+
+\newtheorem{teor}{Teorema}
+\newtheorem{esempio}[teor]{Esempio}
+\newtheorem{osservazione}[teor]{Osservazione}
+\newtheorem{defin}[teor]{Definizione}
+\newtheorem{nota}[teor]{Nota}
+\newtheorem{prop}[teor]{Proposizione}
+\newtheorem{corol}[teor]{Corollario}
+\newtheorem{lemma}[teor]{Lemma}
+\newtheorem{guess}[teor]{Congettura}
+\newtheorem{proprieta}[teor]{Fatto}
+\newtheorem{problem}[teor]{Problema}
+
+\newcommand{\fdim}{\hspace*{\fill}$\Box$}
+\newcommand{\dimostr}{{\bf Dimostrazione: }}
+
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\intero}{\mathbb{Z}}
+\newcommand{\projective}{\mathbb{P}}
+\newcommand{\hyperbolic}{\mathbb{H}}
+\newcommand{\natur}{\mathbb{N}}
+\newcommand{\razionale}{\mathbb{Q}}
+\newcommand{\quaternione}{\mathbb{H}}
+\newcommand{\campo}{\mathbb{K}}
+
+
+\renewcommand{\baselinestretch}{1.2}
+\footskip65pt
+
+% \`e  \`a
+\begin{document}
+\centerline{\bf Varietà Differenziabili (seconda parte)}
+
+\centerline{\bf Corso di Laurea in Matematica A.A. 2021-2022}
+
+\centerline {\bf Docente:
+Andrea Loi}
+
+
+
+\vspace{0.5cm}
+\begin{enumerate}
+\item
+Siano $S_1$ e $S_2$ due sottovariet\`a di due variet\`a differenziabili $M_1$ e $M_2$ rispettivamente. Dimostrare che $S_1\times S_2$
+\'e una sottovariet\`a di $M_1\times M_2$. Dedurre che il toro $T^n$ il toro di dimensione $n$ è una sottovarietà di $\R^{2n}$.
+\item
+Sia $F:\R^2\rightarrow \R, (x, y)\mapsto x^2-6xy+y^2$. Trovare i $c\in\R$ tali che $F^{-1}(c)$ sia una sottovariet\`a di $\R^2$.
+\item
+Dire se le soluzioni del sistema 
+$$\left\{ \begin{array}{l}
+ x^3+y^3+z^3=1\\
+z=xy
+\end{array}\right.$$
+costuiscono una sottovariet\`a di $\R^3$. 
+\item
+Un  polinomio $F(x_0, \dots , x_n)\in \R[x_0, \dots , x_n]$ \'e omogeneo di grado $k$ se \'e combinazione lineare
+di monomi $x_0^{j_1}\dots x_0^{j_m}$ di grado $k$, $\sum_{j=1}^mi_j=k$.
+Dimostrare che
+$$\sum_{i=0}^nx^i\frac{\partial F}{\partial x_i}=kF.$$
+Dedurre che $F^{-1}(c)$, $c\neq  0$ \'e una sottovariet\`a di $\R^n$
+di dimensione $n-1$.
+Dimostrare, inoltre che per $c, d>0$, $F^{-1}(c)$ e $F^{-1}(d)$ sono diffeomorfe e lo stesso vale per $c, d<0$.
+(Suggerimento per la prima parte: usare l'uguaglianza $F(\lambda x_0, \dots , \lambda x_n)=\lambda^kF(x_0, \dots , x_n)$ valida per ogni $\lambda\in\R$).
+\item
+Dimostare che
+ $SL_n(\complex)=\{A\in GL_n(\complex) \ | \ \det A=1\}$
+ \'e una sottovariet\`a di $M_n(\complex)$ di dimensione $2n^2-2$. 
+ \item
+ Sia $F:N\rightarrow M$ un'applicazione liscia tra varietà differenziabili. Dimostare che l'insieme  $PR_F$ dei punti regolari di $F$ \'e un aperto di $N$.
+ \item
+ Sia $F:N\rightarrow M$ un'applicazione liscia tra varietà differenziabili. Dimostrare che se $F$ \'e chiusa allora $VR_F$ (insieme dei punti regolari di $F$) \'e aperto in $M$.
+ \item
+ Dimostrare che  $F:\R\rightarrow \R^3, t\mapsto (t, t^2, t^3)$ \'e un embedding liscio  e scrivere $F(\R)$ come zero di funzioni.
+ \item
+ Dimostrare che  $F:\R\rightarrow \R^2, t\mapsto (\cosh t, \sinh t)$ \'e un embedding liscio  e $F(\R)=\{(x, y)\in\R^2 \ | \ x^2-y^2=1\}$.
+ \item
+ Dimostare che la composizione di immersioni \'e un'immersione e che il prodotto cartesiano di due immersioni \'e un'immersione.
+
+ \item
+ Dimostrare che se $F:N\rightarrow M$ \'e un'immersione e $Z\subset N$ \'e una sottovariet\`a di $N$ allora 
+ $F_{|Z}:Z\rightarrow M$ \'e un'immersione.
+ \item
+Dimostrare che l'applicazione
+ $$F:S^2\rightarrow \R^4, (x, y, z)\mapsto (x^2-y^2, xy, xz, yz)$$
+ induce un embedding liscio da $\R P^2$ a $\R^4$.
+ \item
+ Dimostrare che un'immersione iniettiva e propria \'e un embedding liscio. Mostrare che esistono embedding lisci che non sono applicazioni  proprie.
+ (Ricorda che un'applicazione continua $f:X\rightarrow Y$ tra spazi topologici è propria se $f^{-1}(K)$ è compatto in $X$ per ogni compatto $K$ di $Y$).
+ %\item
+ %Sia $M$ una sottovarietà di $\R^N$ di dimensione $n$. Dimostrare che per ogni $p\in M$
+ %esiste un intorno  $V$ di $p$  in $\R^N$ e $g_{n+1}, \dots , g_{N}$ funzioni differenziabili da un aperto $U\subset \R^n$ in $\R$
+ %tali che 
+ %$$V\cap M=\{\left(a_1, \dots a_n, g_{n+1}(a), \dots ,g_N(a)\right) \ | \ a:=(a_1, \dots a_n)\in U \}.$$
+ %In altre parole ogni sottovarietà di $\R^N$ è localmente esprimibile come grafico.
+% (Suggerimento: usare il fatto (dimostrato a lezione) che se $M$ è una sottovarietà di $\R^N$ allora per ogni punto $p\in M$ si possono scegliere 
+ %$n$   funzioni coordinate  $r^{i_1}, \dots ,r^{i_n}$ di $\R^N$ per definire un sistema di coordinate di $M$ in un intorno di $p$).
+ 
+ \end{enumerate}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
